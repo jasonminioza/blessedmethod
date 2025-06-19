@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+}
+
+.navegador {
+  background-color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 10px;
+}
+
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 24px; 
+  font-weight: bold;
+  color: #111;
+}
+
+.navlinks ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navlinks a:hover {
+  color: #e67817;
+}
+
+.button {
+  background-color: #e67817;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #c9650e;
+}
+
+/* PORTADA */
+.portada {
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1594737625785-cfba1f43dd67?auto=format&fit=crop&w=1600&q=80');
+  background-position: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.fondo {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contenido-portada h1 {
+  color: #fff;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contenido-portada p {
+  color: #eee;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.button-portada {
+  display: inline-block;
+  background-color: #e67817;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.button-portada:hover {
+  background-color: #c7650e;
+}
