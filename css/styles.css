@@ -10,6 +10,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0px;
+  z-index: 10;
 }
 
 hr{
@@ -55,17 +56,102 @@ nav a:hover{
   width: 100px;
   }
 
+
+
+
+
+/*.portadafondo{
+  background-image: url('../images/portadafondo.jpg');
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-top: 90px;
+}*/
+
+.portadafondo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.videofondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.portadatexto {
+  z-index: 1;
+  color: white;
+  padding: 0 20px;
+}
+
+.portadatexto h1 {
+  font-size: 60px;
+  font-family: 'Archivo Black', sans-serif;
+  color: #FFD700;
+}
+
+.portadatexto p {
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+}
+
+.portadafondo2{
+  background-image: url('../images/portadafondo.jpg');
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-top: 90px;
+}
+
+.portadafondo2 h1{  
+  font-size: 60px;
+  color: #FFD700;
+  font-family: 'Archivo Black', sans-serif;
+  z-index: 10;
+}
+
+.portadafondo h1{  
+  font-size: 50px;
+  color: #FFD700;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.portadafondo p{
+  font-size: 20px;
+  color: white;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
 .sobrenosotros {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: #333;
+  background: url('../images/portadafondo.jpg') no-repeat center center;
   }
 
 .fotopareja {
-  width: 50%;
+  width: 60%;
+  height: 1000px;
   object-fit: cover;
-  padding: 50px;
+  padding: 100px;
   }
 
 .introtexto {
@@ -90,59 +176,7 @@ nav a:hover{
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
-    }
-
-.portadafondo{
-  background-image: url('../images/portadafondo.jpg');
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  margin-top: 90px;
-}
-
-.portadafondo2{
-  background-image: url('../images/portadafondo.jpg');
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  margin-top: 90px;
-}
-
-.portadafondo2 h1{  
-  font-size: 50px;
-  color: #FFD700;
-  font-family: 'Archivo Black', sans-serif;
-}
-
-.portadafondo h1{  
-  font-size: 50px;
-  color: #FFD700;
-  font-family: 'Archivo Black', sans-serif;
-}
-
-.portadafondo p{
-  font-size: 20px;
-  color: white;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.sobremi{
-  padding: 80px;
-  background-color: #333;
-  text-align: center;
-  display: flex;
-  gap: 100px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
-}
+  }
 
 .benan img{
   height: 500px;
@@ -167,7 +201,6 @@ nav a:hover{
   margin: 60px auto;
   padding: 0 20px;
   width: 100%;
-
 }
 
 .servicios h2{
@@ -179,9 +212,9 @@ nav a:hover{
 }
 
 .servicios p{
-  font-size: 17px;
+  font-size: 25px;
   margin-bottom: 40px;
-  color: #555;
+  color: #ffffff;
   font-family: 'poppins', sans-serif;
 
 }
@@ -230,38 +263,79 @@ nav a:hover{
   padding: 10px 18px;
   border-radius: 4px;
   font-weight: 600;
-   
 }
 
-.planentrenamiento a:hover, .plannutricion a:hover, .plancompleto a:hover{
-  background: #0056b3;
+.iconotitulo {
+  width: 150px;
+  height: 150px;
+  margin: 50px;
 }
 
 .testimonios{
   text-align: center;
-  background-color: #333;
+  background: url('../images/portadafondo.jpg');
 }
 
 .testimonios h2{
-  color: #ffffff;
+  color: #FFD700;
+  font-size: 50px;
   font-family: 'Archivo Black', sans-serif;
-  padding: 20px;
+  padding: 50px;
+  margin: 20px;
 }
 
 .testimonioslistas{
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 50px;
   justify-content: center;
-  margin: 40px;
+  margin: 20px;
   scroll-snap-align: center
-  
 }
 
-.carrousel{
-  scroll-snap-type: x mandatory;
-  display: flex ;
+.carrousel {
+  display: flex;
+  gap: 30px;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.carrousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carrousel::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+.carrousel > div {
+  flex: 0 0 auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  scroll-snap-align: start;
+  text-align: left;
+}
+
+.carrousel h4 {
+  margin-top: 10px;
+  color: #000;
+}
+
+.carrousel p {
+  font-size: 14px;
+  color: #555;
+}
+
+.carrousel img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 10px;
 }
 
 .testimonio1{
@@ -283,6 +357,24 @@ nav a:hover{
 }
 
 .testimonio4{
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.testimonio5{
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.testimonio6{
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.testimonio7{
   padding: 20px;
   border-radius: 10px;
   width: 300px;
@@ -350,7 +442,7 @@ footer p {
   font-size: 1.2rem;
   line-height: 1.8; 
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -363,9 +455,112 @@ footer p {
 }
 
 .fotologo img {
-  width: 300px;
-  height: 450px;
+  width: 360px;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.textosobrenosotros{
+  flex: 1;
+  text-align: left;
+}
+
+
+/* CONTACTO PAGES */
+
+.contacto2{
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.contacto2 form{
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacto2 input, .contacto2 textarea{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+}
+
+.contacto2 textarea{
+  height: 100px;
+}
+
+.contacto2 button {
+  background-color: #FFD700;
+  color: #000;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+.contacto2 button:hover {
+  background-color: #daa520;
+}
+
+/* FORUMLARIO PAGES*/
+
+.formulario1 {
+  background-color: #000000;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contenedorformu {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+}
+
+textarea {
+  min-height: 80px;
+  }
+
+.checkbox-group label {
+  display: block;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #FFD700;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e6c200;
 }

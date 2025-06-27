@@ -8,21 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<style>
-    
-</style>
+
 <body>
     <header>
         <div class="navegador">
-            <a href="#" class="logo"><img src="images/_Logo_blanco.png" alt="logo"></a>
+            <a href="index.html" class="logo"><img src="images/_Logo_blanco.png" alt="logo"></a>
             <nav>
                 <ul>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Casos de éxito</a></li>
-                    <li><a href="#">Testimonios</a></li>
-                    <li><a href="#">Formulario</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="pages/sobremi.html">Sobre nosotros</a></li>
+                    <li><a href="pages/formulario.html">Formulario</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,14 +25,18 @@
     </header>
 
     <section class="portadafondo">
-        <div>
+      <video autoplay muted loop playsinline class="videofondo">
+          <source src="images/AQMAZExqUl_ogOiOHqANwF6GdThMKz4zb2VZhjm-2UKKPN21U1zwD8HirEaLFYmOXnGYR7bdaRQE10UqLyWbEh9iJvIuV9yrILaY-ZY.mp4" type="video/mp4">
+      </video>
+
+        <div class="portadatexto">
             <h1>BLESSED METHOD</h1>
             <p>El lugar donde la salud, el rendimiento máximo y la estética se encuentran</p>
         </div>
     </section>
 
      <section class="sobrenosotros">
-    <img class="fotopareja" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?fit=crop&w=1600&q=80" alt="Cristian y Eva">
+    <img class="fotopareja" src="images/fotopareja.jpg" alt="Cristian y Eva">
     
     <div class="introtexto">
       <h2>¡Hola! Somos Cristian y Eva.</h2>
@@ -47,35 +46,44 @@
     </div>
     </section>
 
-    <section class="servicios">
+    <section class="servicios" id="servicios">
         <div class="servicioscontenido">
             <h2>Servicios con <strong>Blessed Method</strong></h2>
             <p>Descubre cómo podemos ayudarte a mejorar tu salud, rendimiento y estética con servicios personalizados.</p>
+            <h3>Servicios con Cristian Benan</h3>
             <div class="servicioslistas">
                 <div class="planentrenamiento">
-                    <h3>Plan de entrenamiento</h3>
-                    <p>Plan de nutrición 100% personalizado y online, con dieta personal para transformar tu físico.
-                        Adaptación a tus preferencias alimentarias: dietas veganas, vegetarianas, o adaptadas a intolerancias.
-                        Seguimiento quincenal con un coach nutricional online.
+                    <h3><img src="images/entrenadorpersonalonline.png" class="iconotitulo">Entrenador personal Online</h3>
+                    <p>Programas personalizados con seguimiento online para alcanzar tus metas desde cualquier lugar.
                     </p>
-                        <a href="#">SABER MÁS</a>
                 </div>
                 <div class="plannutricion">
-                    <h3>Plan de nutricion</h3>
-                    <p>Plan de entrenamiento online 100% personalizado según tus objetivos.
-                        Rutinas diseñadas para realizar en el gimnasio o en casa con el material disponible.
-                        Frecuencia de entrenamiento adaptada: de 3 a 6 días por semana.
+                    <h3><img src="images/receta.png" class="iconotitulo">Recetas</h3>
+                    <p>Menús flexibles en un bendito Excel: se adaptan a tus gustos, cambios y progreso.
                     </p>
-                        <a href="#">SABER MÁS</a>
                 </div>
                 <div class="plancompleto">
-                    <h3>Plan completo</h3>
-                    <p>Plan de entrenamiento online 100% personalizado según tus objetivos.
-                        Dieta adaptada a tus gustos, necesidades y estilo de vida.
-                        Rutinas diseñadas para realizar en gimnasio o en casa con el material disponible.
-                        Frecuencia de entrenamiento ajustada: de 3 a 6 días por semana.
+                    <h3><img src="images/consultoria.png" class="iconotitulo"> Consultoría online</h3>
+                    <p>Sesi‌ones vía videollamada para resolver dudas y ajustar tu plan cuando lo necesites.
                     </p>
-                        <a href="#">SABER MÁS</a>
+                </div>
+            </div>
+                <h3>Servicios con Eva Brigitte</h3>
+            <div class="servicioslistas">
+                <div class="planentrenamiento">
+                    <h3><img src="images/presencial.png" class="iconotitulo">Entrenadora personal online y presencial</h3>
+                    <p>Sesiones adaptadas a tu nivel y objetivos, tanto en línea como cara a cara..
+                    </p>
+                </div>
+                <div class="plannutricion">
+                    <h3><img src="images/volley.png" class="iconotitulo">Coach en volleyball</h3>
+                    <p>Entrenamiento especializado para mejorar tu rendimiento en la pista.
+                    </p>
+                </div>
+                <div class="plancompleto">
+                    <h3><img src="images/power.png" class="iconotitulo">Entrenadora powerlifting</h3>
+                    <p>Planificación y técnica para maximizar tu fuerza en sentadilla, peso muerto y press.
+                    </p>
                 </div>
             </div>
         </div>
@@ -84,29 +92,35 @@
     <section class="testimonios">
         <h2>Testimonios</h2>
         <div class="testimonioslistas">
-            <div class="carrousel">
+            <div class="carrousel" id="carrousel">
                 <div class="testimonio1">
-                    <img src="">
+                    <img src="images/benan.jpg">
                     <h4>Jason Minioza</h4>
                     <p>"Entrenar con Cristian ha sido increible. Su tecnica y saber hacer me han motivado a seguir esforzandome por contruir mi fisico ideal"</p>
                 </div>
 
                 <div class="testimonio2">
-                    <img src="">
+                    <img src="images/eva.jpg">
                     <h4>Vanessa Bandolin</h4>
-                    <p>"Con el asesoramiento nutricion he podido bajar mucho de peso."</p>
+                    <p>"Con el asesoramiento nutricion he podido bajar mucho de peso. "</p>
                 </div>
 
                 <div class="testimonio3">
-                    <img src="">
+                    <img src="images/fotopareja.jpg">
                     <h4>Steven Bryan</h4>
-                    <p>"Aparte de buen entrenador es una buena persona."</p>
+                    <p>"Aparte de buen entrenador es una buena persona. Gracias a Cristian he podido lograr mis objetivos. Estoy muy feliz por ello."</p>
                 </div>
 
                 <div class="testimonio4">
-                    <img src="">
+                    <img src="images/powerbenan.jpg">
+                    <h4>Clark Hidalgo</h4>
+                    <p>"Estoy encantado de poder formar parte de este equipo. No me arrepiento para nada te tomar esta decision."</p>
+                </div>
+
+                <div class="testimonio5">
+                    <img src="images/squat.jpg">
                     <h4>Mariz Molina</h4>
-                    <p>"Estoy encantado de poder formar parte de este equipo."</p>
+                    <p>"Tanto Eva como Cristian me han ayudado un monton a hacer mi cambio fisico. He de decir que me han sorprendido, y he podido lograr mis objetivos!"</p>
                 </div>
             </div>
         </div>
@@ -135,7 +149,21 @@
 
     </section>
 </body>
+</html>
 
 <footer>
     <p>&copy; Todos los derechos reservados. 2025 Blessed Method.</p>
-</html>
+</footer>
+
+<script>
+  const carrousel = document.getElementById('carrousel');
+
+  function scrollLeft() {
+    carrousel.scrollBy({ left: -320, behavior: 'smooth' });
+  }
+
+  function scrollRight() {
+    carrousel.scrollBy({ left: 320, behavior: 'smooth' });
+  }
+</script>
+
